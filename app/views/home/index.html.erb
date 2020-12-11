@@ -1,0 +1,95 @@
+<div class="row">
+  <% @noticias.each do |noticia| %>
+  <div class="col-6 col-sm-6 col-lg-4">
+    <h2><%= noticia.titulo %></h2>
+    <p>
+     <%= noticia.subtitulo.truncate(27, separator: /\s/) %>
+   </p>
+   <p>
+     <%= noticia.descricao.truncate(27, separator: /\s/) %>
+   </p>
+   <p>
+     <%= noticia.imagem_capa %><%= image_tag(  image_path("/uploads/#{noticia.imagem_capa}"),size: "100x100", alt: "Imagem capa" )%>
+   </p>
+   <p>
+     <%= noticia.autor %>
+   </p>
+   <p>
+     <%= link_to 'Show', nil,  class: "btn btn-default" %>
+   </p>
+ </div><!--/span-->
+ <% end %>
+
+ <div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+<div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+<div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+<div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+<div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+<div class="col-6 col-sm-6 col-lg-4">
+  <h2>Heading</h2>
+  <p>
+   Donec id elit non mi porta gravida at eget metus. Fusce
+   dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+   fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+   mollis euismod. Donec sed odio dui.
+ </p>
+ <p>
+   <a class="btn btn-default" href="#" role="button">View details »</a>
+ </p>
+</div><!--/span-->
+</div><!--/row-->

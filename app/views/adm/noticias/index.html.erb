@@ -1,0 +1,39 @@
+<h1><%=t('noticias.listing_noticias')%></h1>
+
+<%= link_to 'New Noticia', new_adm_noticia_path, class: "btn btn-success" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Subtitulo</th>
+      <th>Content</th>
+      <th>Img capa</th>
+      <th>Autor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adm_noticias.each do |adm_noticia| %>
+    <tr>
+      <td><%= adm_noticia.titulo %></td>
+      <td><%= adm_noticia.subtitulo.truncate(270, separator: /\s/) %></td>
+      <td><%= adm_noticia.descricao.truncate(270, separator: /\s/) %></td>
+      <td><%= adm_noticia.imagem_capa %><%= image_tag(adm_noticia.imagem_capa,size: "100x100", alt: "Imagem capa" )%></td>
+      <td><%= adm_noticia.autor %></td>
+      <td><%= link_to 'Show', adm_noticia , class: "btn btn-default"%></td>
+      <% if can? :update, @adm_noticias %>
+      <td><%= link_to 'Edit', edit_adm_noticia_path(adm_noticia), class: "btn btn-primary" %></td>
+      <% end %>
+      <% if can? :destroy, @adm_noticias %>
+      <td><%= link_to 'Destroy', adm_noticia, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+       <% end %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Noticia', new_adm_noticia_path, class: "btn btn-success" %>
